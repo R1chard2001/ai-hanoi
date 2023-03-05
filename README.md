@@ -4,7 +4,7 @@ Az állapottér a **State.cs** fájlban található. Jelenlegi példánkban a ko
 Van egy kezdő állapot, ezt általában a konstruktorban létre is hozzuk. Továbbá van célállapot is, melyet egy metódus segítségével (*IsTargetState*) tudjuk leellenőrizni.
 Magát az osztályt az *ICloneable* interface-ből örököltetjük, későbbi órákon ez hasznos lesz számunkra, de itt is alkalmazzuk.
 ## Operátorok
-Az operátorok osztálya a **Operator.cs* fájlan található. Benne kell megvalósítani azt a műveletet, mely állapotot kér és állapotot ad vissza.
+Az operátorok osztálya a *Operator.cs* fájlan található. Benne kell megvalósítani azt a műveletet, mely állapotot kér és állapotot ad vissza.
 Jelenlegi példánkban az operátor két adat alapján létrehozható:
 - honnan szeretnénk a korongot elvenni
 - hová szeretnénk azt lerakni
