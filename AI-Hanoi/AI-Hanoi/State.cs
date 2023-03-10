@@ -60,6 +60,23 @@ namespace AI_Hanoi
             }
             return poleA.Append(poleB).Append(poleC).ToString();
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is State))
+                return false;
+
+            State other = obj as State;
+            if (other.NumberOfDiscs != this.NumberOfDiscs)
+                return false;
+
+            for (int i = 0; i < NumberOfDiscs; i++)
+            {
+                if (other.Discs[i] != this.Discs[i])
+                    return false;
+            }
+
+            return true;
+        }
     }
 }

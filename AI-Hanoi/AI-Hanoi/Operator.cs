@@ -8,38 +8,38 @@ namespace AI_Hanoi
 {
     internal class Operator
     {
-        public int From;
-        public int To;
+        public int from;
+        public int to;
         public Operator(int from, int to)
         {
-            this.From = from;
-            this.To = to;
+            this.from = from;
+            this.to = to;
         }
 
         public bool IsAplicable(State state)
         {
-            return From != To &&
-                FromPoleHasAnyDisc(state) && 
+            return from != to &&
+                fromPoleHasAnyDisc(state) && 
                 !toPoleHasSmallerDisc(state);
         }
-        private int GetFromIndex(State state)
+        private int getFromIndex(State state)
         {
             for (int i = 0; i < state.NumberOfDiscs; i++)
             {
-                if (state.Discs[i] == From)
+                if (state.Discs[i] == from)
                     return i;
             }
             return -1;
         }
-        private bool FromPoleHasAnyDisc(State state)
+        private bool fromPoleHasAnyDisc(State state)
         {
-            return GetFromIndex(state) > -1;
+            return getFromIndex(state) > -1;
         }
         private bool toPoleHasSmallerDisc(State state)
         {
-            for (int i = GetFromIndex(state) - 1; i >= 0; i--)
+            for (int i = getFromIndex(state) - 1; i >= 0; i--)
             {
-                if (state.Discs[i] == To)
+                if (state.Discs[i] == to)
                 {
                     return true;
                 }
@@ -49,7 +49,7 @@ namespace AI_Hanoi
         public State Apply(State state)
         {
             State newState = (State)state.Clone();
-            newState.Discs[GetFromIndex(state)] = To;
+            newState.Discs[getFromIndex(state)] = to;
             return newState;
         }
     }
