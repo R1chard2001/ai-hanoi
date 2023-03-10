@@ -1,4 +1,4 @@
-#Nem módosítható gráfkereső algoritmusok
+# Nem módosítható gráfkereső algoritmusok
 
 ## Próba-hiba módszer (TrialAndError.cs)
 A próba hiba módszer az egyik legegyszerűbb gráfkereső algoritmus. Az adatbázisban (memóriában) csak a jelenlegi állapot található meg. (Példánkban pluszban le van mentve a kezdőállapot a könnyú újraindítás miatt) A ciklus lényege, hogy a jelenlegi állapothoz keresünk egy alkalmazható operátort, ezt alkalmazva a következő állapotot lementjük a jelenlegibe, majd újraindul a ciklus. 
