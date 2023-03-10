@@ -37,14 +37,4 @@ namespace AI_Hanoi
         public abstract Operator SelectOperator();
         public abstract void Solve();
     }
-
-
-
-    internal static class StringPP
-    {
-        public static void Valami(this string s)
-        {
-
-        }
-    }
 }
