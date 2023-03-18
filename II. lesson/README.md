@@ -9,4 +9,4 @@ A próba-hiba módszer alfajtája. Ha nem talál alkalmazható operátort a jele
 Megjegyzés: Hanoinál nem érdemes alkalmazni, nem találkozunk zsákutcával
 
 ## Hegymászó algoritmus
-Az operátorokat mindig egy bizonyos sorrendbe nézi, hogy alkalmazható-e. Könnyen körbe jothatunk az algoritmus alkalmazásakor. Szintén van egy restartos alfajtája *Random walks* néven.
+Az operátorokat mindig egy bizonyos sorrendbe nézi, hogy alkalmazható-e. Könnyen körbe juthatunk az algoritmus alkalmazásakor. Szintén van egy restartos alfajtája *Random walks* néven.
