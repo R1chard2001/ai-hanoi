@@ -46,6 +46,7 @@ namespace AI_Hanoi
                 sb.AppendLine(Parent.ToString());
                 sb.AppendLine("---------------------");
             }
+            sb.AppendLine("Depth: " + Depth);
             sb.Append(State.ToString());
             return sb.ToString();
         }
