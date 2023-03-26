@@ -49,6 +49,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solvers\ASolver.cs" />
+    <Compile Include="Solvers\BacktrackWithBranchLimit.cs" />
+    <Compile Include="Solvers\BacktrackWithLoopCheck.cs" />
+    <Compile Include="Solvers\BacktrackWithDepthLimit.cs" />
     <Compile Include="Solvers\BreadthFirst.cs" />
     <Compile Include="Solvers\DepthFirst.cs" />
     <Compile Include="Solvers\TrialAndErrorWithRestart.cs" />

@@ -50,5 +50,19 @@ namespace AI_Hanoi
             sb.Append(State.ToString());
             return sb.ToString();
         }
+
+        public bool HasLoop()
+        {
+            Node temp = Parent;
+            while (temp != null)
+            {
+                if (temp.Equals(this))
+                {
+                    return true;
+                }
+                temp = temp.Parent;
+            }
+            return false;
+        }
     }
 }
