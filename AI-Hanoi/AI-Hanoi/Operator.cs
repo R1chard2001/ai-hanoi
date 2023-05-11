@@ -16,7 +16,7 @@ namespace AI_Hanoi
             this.to = to;
         }
 
-        public bool IsAplicable(State state)
+        public bool IsApplicable(State state)
         {
             return from != to &&
                 fromPoleHasAnyDisc(state) && 

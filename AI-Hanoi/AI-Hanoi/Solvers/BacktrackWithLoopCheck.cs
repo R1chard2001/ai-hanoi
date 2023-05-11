@@ -19,7 +19,7 @@ namespace AI_Hanoi
             int index = CurrentNode.OperatorIndex++;
             while (index < Operators.Count)
             {
-                if (Operators[index].IsAplicable(CurrentNode.State))
+                if (Operators[index].IsApplicable(CurrentNode.State))
                 {
                     return Operators[index];
                 }

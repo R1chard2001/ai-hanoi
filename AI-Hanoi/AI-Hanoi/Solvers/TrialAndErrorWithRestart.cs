@@ -22,7 +22,7 @@ namespace AI_Hanoi
             List<int> indexList = GetRandomIndexList();
             foreach (int index in indexList)
             {
-                if (Operators[index].IsAplicable(CurrentState))
+                if (Operators[index].IsApplicable(CurrentState))
                 {
                     return Operators[index];
                 }

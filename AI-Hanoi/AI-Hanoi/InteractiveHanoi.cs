@@ -35,7 +35,7 @@ namespace AI_Hanoi
                 }
                 Operator o = new Operator(from - 1, to - 1);
                 Console.WriteLine("--------------------");
-                if (o.IsAplicable(state))
+                if (o.IsApplicable(state))
                 {
                     state = o.Apply(state);
                     Console.WriteLine(state);

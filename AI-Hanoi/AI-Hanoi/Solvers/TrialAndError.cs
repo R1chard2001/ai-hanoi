@@ -19,7 +19,7 @@ namespace AI_Hanoi
             while (true)
             {
                 int index = random.Next(Operators.Count);
-                if (Operators[index].IsAplicable(CurrentState))
+                if (Operators[index].IsApplicable(CurrentState))
                 {
                     return Operators[index];
                 }
