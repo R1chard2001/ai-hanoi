@@ -41,16 +41,17 @@ namespace AI_Hanoi
             {
                 CurrentNode = OpenNodes.Dequeue();
                 ClosedNodes.Add(CurrentNode);
+                if (CurrentNode.IsTargetNode())
+                {
+                    Path = CurrentNode;
+                    break;
+                }
                 Operator selectedOperator = SelectOperator();
                 while (selectedOperator != null)
                 {
                     State newState = selectedOperator.Apply(CurrentNode.State);
                     Node newNode = new Node(newState, CurrentNode);
-                    if (newNode.IsTargetNode())
-                    {
-                        Path = newNode;
-                        break;
-                    }
+                    
                     if (!OpenNodes.Contains(newNode) && !ClosedNodes.Contains(newNode))
                     {
                         OpenNodes.Enqueue(newNode);
