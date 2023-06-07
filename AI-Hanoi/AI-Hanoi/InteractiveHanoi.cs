@@ -10,7 +10,7 @@ namespace AI_Hanoi
     {
         public static void main()
         {
-            State state = new State(3);
+            State state = new State();
             Console.WriteLine(state);
             string input;
             do

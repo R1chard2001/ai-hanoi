@@ -10,10 +10,8 @@ namespace AI_Hanoi
     {
         public Stack<Node> OpenNodes = new Stack<Node>();
         public List<Node> ClosedNodes = new List<Node>();
-        public int NumberOfDiscs;
-        public DepthFirst(int numberOfDiscs) : base()
+        public DepthFirst() : base()
         {
-            NumberOfDiscs = numberOfDiscs;
         }
         public override Operator SelectOperator()
         {
@@ -36,7 +34,7 @@ namespace AI_Hanoi
             OpenNodes.Clear();
             ClosedNodes.Clear();
             Path = null;
-            OpenNodes.Push(new Node(new State(NumberOfDiscs)));
+            OpenNodes.Push(new Node(new State()));
             while (0 < OpenNodes.Count)
             {
                 CurrentNode = OpenNodes.Pop();

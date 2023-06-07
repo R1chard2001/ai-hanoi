@@ -24,7 +24,7 @@ namespace AI_Hanoi
         }
         private int getFromIndex(State state)
         {
-            for (int i = 0; i < state.NumberOfDiscs; i++)
+            for (int i = 0; i < Settings.NumberOfDiscs; i++)
             {
                 if (state.Discs[i] == from)
                     return i;

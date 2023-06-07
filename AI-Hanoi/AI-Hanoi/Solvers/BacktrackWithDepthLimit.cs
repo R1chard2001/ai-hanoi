@@ -8,11 +8,9 @@ namespace AI_Hanoi
 {
     internal class BacktrackWithDepthLimit : ASolver
     {
-        public int NumberOfDiscs;
         public int DepthLimit;
-        public BacktrackWithDepthLimit(int numberOfDiscs, int depthLimit)
+        public BacktrackWithDepthLimit(int depthLimit)
         {
-            NumberOfDiscs = numberOfDiscs;
             DepthLimit = depthLimit;
         }
         public Node CurrentNode;
@@ -32,7 +30,7 @@ namespace AI_Hanoi
 
         public override void Solve()
         {
-            CurrentNode = new Node(new State(NumberOfDiscs));
+            CurrentNode = new Node(new State());
             while (CurrentNode != null && !CurrentNode.IsTargetNode())
             {
                 if (CurrentNode.Depth >= DepthLimit)

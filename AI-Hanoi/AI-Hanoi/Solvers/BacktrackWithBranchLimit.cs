@@ -8,11 +8,9 @@ namespace AI_Hanoi
 {
     internal class BacktrackWithBranchLimit : ASolver
     {
-        public int NumberOfDiscs;
         public int DepthLimit;
-        public BacktrackWithBranchLimit(int numberOfDiscs, int depthLimit)
+        public BacktrackWithBranchLimit(int depthLimit)
         {
-            NumberOfDiscs = numberOfDiscs;
             DepthLimit = depthLimit;
         }
         public Node CurrentNode;
@@ -47,7 +45,7 @@ namespace AI_Hanoi
         {
             currentDepthLimit = DepthLimit;
             Path = null;
-            CurrentNode = new Node(new State(NumberOfDiscs));
+            CurrentNode = new Node(new State());
             while (CurrentNode != null)
             {
                 if (CurrentNode.HasLoop() ||

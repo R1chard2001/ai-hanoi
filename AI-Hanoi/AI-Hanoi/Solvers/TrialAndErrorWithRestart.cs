@@ -14,7 +14,7 @@ namespace AI_Hanoi
         public int MaxRestarts;
         public TrialAndErrorWithRestart(int numberOfDisks, int maxRestarts) : base()
         {
-            StartState = new State(numberOfDisks);
+            StartState = new State();
             MaxRestarts = maxRestarts;
         }
         public override Operator SelectOperator()

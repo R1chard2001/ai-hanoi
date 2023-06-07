@@ -10,24 +10,41 @@ namespace AI_Hanoi
     {
         private Random random = new Random();
         public State CurrentState;
-        public TrialAndError(int numberOfDisks) : base()
+
+        public TrialAndError() : base()
         {
-            CurrentState = new State(numberOfDisks);
         }
+        private int[] getRandomIndexArray()
+        {
+            List<int> result = new List<int>();
+            while (result.Count < Operators.Count)
+            {
+                int number;
+                do
+                {
+                    number = random.Next(Operators.Count);
+                } while (result.Contains(number));
+                result.Add(number);
+            }
+            return result.ToArray();
+        }
+
         public override Operator SelectOperator()
         {
-            while (true)
+            int[] indexArray = getRandomIndexArray();
+            foreach (int index in indexArray)
             {
-                int index = random.Next(Operators.Count);
                 if (Operators[index].IsApplicable(CurrentState))
                 {
                     return Operators[index];
                 }
             }
+            throw new Exception("Dead end");
         }
         public override void Solve()
         {
             int step = 0;
+            CurrentState = new State();
             Console.WriteLine("Step {0}", step++);
             Console.WriteLine(CurrentState);
             while (!CurrentState.IsTargetState())

@@ -8,18 +8,16 @@ namespace AI_Hanoi
 {
     internal class State:ICloneable
     {
-        public int NumberOfDiscs;
         public int[] Discs;
-        public State(int numberOfDiscs)
+        public State()
         {
-            this.NumberOfDiscs = numberOfDiscs;
-            Discs = new int[numberOfDiscs];
+            Discs = new int[Settings.NumberOfDiscs];
         }
 
         public object Clone()
         {
-            State newState = new State(NumberOfDiscs);
-            for (int i = 0; i < NumberOfDiscs; i++)
+            State newState = new State();
+            for (int i = 0; i < Settings.NumberOfDiscs; i++)
             {
                 newState.Discs[i] = Discs[i];
             }
@@ -41,7 +39,7 @@ namespace AI_Hanoi
             StringBuilder poleA = new StringBuilder("Pole 1: ");
             StringBuilder poleB = new StringBuilder("\nPole 2: ");
             StringBuilder poleC = new StringBuilder("\nPole 3: ");
-            for (int i = NumberOfDiscs - 1; i >= 0; i--)
+            for (int i = Settings.NumberOfDiscs - 1; i >= 0; i--)
             {
                 switch (Discs[i])
                 {
@@ -67,10 +65,8 @@ namespace AI_Hanoi
                 return false;
 
             State other = obj as State;
-            if (other.NumberOfDiscs != this.NumberOfDiscs)
-                return false;
 
-            for (int i = 0; i < NumberOfDiscs; i++)
+            for (int i = 0; i < Settings.NumberOfDiscs; i++)
             {
                 if (other.Discs[i] != this.Discs[i])
                     return false;

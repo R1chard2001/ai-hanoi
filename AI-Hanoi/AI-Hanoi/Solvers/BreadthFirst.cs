@@ -10,10 +10,8 @@ namespace AI_Hanoi
     {
         public Queue<Node> OpenNodes = new Queue<Node>();
         public List<Node> ClosedNodes = new List<Node>();
-        public int NumberOfDiscs;
-        public BreadthFirst(int numberOfDiscs) : base()
+        public BreadthFirst() : base()
         {
-            NumberOfDiscs = numberOfDiscs;
         }
         public override Operator SelectOperator()
         {
@@ -36,7 +34,7 @@ namespace AI_Hanoi
             OpenNodes.Clear();
             ClosedNodes.Clear();
             Path = null;
-            OpenNodes.Enqueue(new Node(new State(NumberOfDiscs)));
+            OpenNodes.Enqueue(new Node(new State()));
             while (0 < OpenNodes.Count)
             {
                 CurrentNode = OpenNodes.Dequeue();

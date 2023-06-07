@@ -8,10 +8,8 @@ namespace AI_Hanoi
 {
     internal class BacktrackWithLoopCheck : ASolver
     {
-        public int NumberOfDiscs;
-        public BacktrackWithLoopCheck(int numberOfDiscs)
+        public BacktrackWithLoopCheck()
         {
-            NumberOfDiscs = numberOfDiscs;
         }
         public Node CurrentNode;
         public override Operator SelectOperator()
@@ -30,7 +28,7 @@ namespace AI_Hanoi
 
         public override void Solve()
         {
-            CurrentNode = new Node(new State(NumberOfDiscs));
+            CurrentNode = new Node(new State());
             while (CurrentNode != null && !CurrentNode.IsTargetNode())
             {
                 if (CurrentNode.HasLoop())

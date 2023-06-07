@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameSettings.cs" />
     <Compile Include="InteractiveHanoi.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Operator.cs" />

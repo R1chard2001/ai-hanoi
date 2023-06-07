@@ -10,7 +10,7 @@ namespace AI_Hanoi
     {
         static void Main(string[] args)
         {
-            ASolver s = new BacktrackWithBranchLimit(4, 31);
+            ASolver s = new TrialAndError();
             s.Solve();
             Console.ReadLine();
         }
